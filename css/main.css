@@ -9,8 +9,21 @@ h1 {
 a {
   color: #f00;
 }
+h2 + p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1em auto 0;
+  max-width: 70%;
+  text-align: center;
+}
 
 /* HEADER STYLES */
+.header {
+  background-color: #aaa;
+  height: 300px;
+  position: relative;
+  width: 100%;
+}
 .header_nav {
   float: right;
   padding: 5.5vh 60px 0 0;
@@ -18,6 +31,10 @@ a {
 .header_nav > li {
   display: inline-block;
   margin-left: 1em;
+}
+.header_nav > li + li {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 1em;
 }
 .header_nav a {
   color: #000;
@@ -35,6 +52,10 @@ a {
 .header_nav a:hover,
 .header_nav a:active {
   color: #ed6e2f;
+}
+.header_logo {
+  bottom: 50px;
+  position: absolute;
 }
 .header_logo:hover,
 .header_logo:active {
@@ -64,6 +85,10 @@ a {
   text-decoration: none;
   vertical-align: middle;
   width: 2.5em;
+}
+.social_link:hover,
+.social_link:active {
+  background: rgba(100, 100, 100, 0.5);
 }
 .social_list {
   list-style: none;
