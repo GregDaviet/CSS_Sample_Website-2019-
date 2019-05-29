@@ -109,7 +109,14 @@ h2 ~ p {
 /* HERO STYLES */
 .full_hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
+}
+.hero_home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
 }
 
 /* SOCIAL STYLES */
