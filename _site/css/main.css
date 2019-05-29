@@ -118,6 +118,28 @@ h2 ~ p {
   background-image: url(/images/shark.jpg);
   background-position: center top;
 }
+.hero_content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.hero_content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+.hero_content .social_link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #556c83;
+}
+.hero_content .social_link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 
 /* SOCIAL STYLES */
 .social_link {
