@@ -26,6 +26,7 @@ a {
 }
 p {
   line-height: 1.5;
+  margin: 0.75em 0;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -197,17 +198,24 @@ h2 ~ p {
 
 /* HOMEPAGE STYLES */
 .home_callout {
+  align-items: center;
   background-color: #000;
   color: #fff;
+  display: flex;
   padding: 7vh 0;
 }
 .callout_title {
+  flex-basis: 0;
+  flex-grow: 1;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
 }
 .callout_copy {
+  flex-basis: 45em;
+  flex-shrink: 0;
   font-size: 0.8rem;
+  padding: 0 3vw;
 }
 .home_section {
   margin: 6rem auto;
