@@ -4,7 +4,15 @@ html {
   padding: 0 30px;
 }
 body {
+  display: flex;
+  flex-direction: column;
   font-family: helvetica, arial, sans;
+  min-height: 100vh;
+}
+.content_container {
+  flex-grow: 1;
+  padding-top: 10vh;
+  width: 100%;
 }
 h1 {
   font-size: 7vw;
@@ -112,13 +120,13 @@ h2 ~ p {
 }
 
 
+
 /* HERO STYLES */
 .full_hero {
   background-color: #c7dbfc;
   background-size: cover;
   box-sizing: border-box;
-  height: 100vh;
-  padding-top: 10vh;
+  height: 90vh;
 }
 .full_hero:after {
   /*border-color: #fff red blue white;*/
