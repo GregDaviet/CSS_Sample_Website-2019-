@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
 }
 .content_container {
+  display: flex;
   flex: 1 1 auto;
   padding-top: 10vh;
   width: 100%;
@@ -120,7 +121,27 @@ h2 ~ p {
   color: #ccc;
 }
 
-
+/* COLUMN STYLES */
+.col_three {
+  display: flex;
+  flex: 1;
+}
+.col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col_three .col ~ .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col_three .col_nav {
+  flex: 0 1 15em;
+}
+.col_three .col_content {
+  flex: 1;
+}
+.col_three .col_aside {
+  flex: 0 1 20em;
+}
 
 /* HERO STYLES */
 .full_hero {
