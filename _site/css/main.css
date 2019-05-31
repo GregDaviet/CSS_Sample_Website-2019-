@@ -300,6 +300,9 @@ h2 ~ p {
 .gallery_thumbs img:hover {
   opacity: 1;
 }
+.gallery_thumbs .current {
+  cursor: default;
+}
 .gallery_thumbs .current img {
   box-shadow: 0 0 0 5px #ed6e2f;
   opacity: 1;
