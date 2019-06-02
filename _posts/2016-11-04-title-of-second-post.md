@@ -1,32 +1,24 @@
 ---
 layout: post
-title: This is the title of the second post
-postHero: /images/shark.jpg
-author: Me, Myself, and I
-authorTwitter: http://twitter.com/mhartl
-gravatar: https://gravatar.com/avatar/ffda7d145b83c4b118f982401f962ca6?s=150
+title: Orchids&#58; Yes or No No NO???
+postHero: /images/small/slide1.jpg
+author: Greg Daviet
+authorTwitter: http://twitter.com/gregdaviet
+gravatar: https://www.gravatar.com/avatar/b2717dfda0567edc571c1e07b51cea46?s=150
 postFooter: Additional information, and maybe a <a href="#">link or two</a>
 ---
 
-Call me *Ishmael*. Some years ago–*never mind how long
-precisely*–having little or no money in my purse, and nothing
-particular to interest me on shore, I thought I would sail about a little
-and see the watery part of the world. It is a way I have of driving off
-the spleen and regulating the circulation.
+The dating game is a minefield and it’s one that must be entered with trepidation.
+
+There are few things in life that are more uncertain than a first date.
 
 <img class="pull-left" src="http://placekitten.com/g/400/200"
      alt="kitten">
 
-Whenever I find myself growing grim about the mouth; whenever it is a damp,
-drizzly November in my soul; whenever I find myself involuntarily pausing
-before coffin warehouses, and bringing up the rear of every funeral I meet;
-and especially whenever my hypos get such an upper hand of me, that it
-requires a strong moral principle to prevent me from deliberately stepping
-into the street, and methodically knocking people’s hats off—then, I
-account it high time to get to sea as soon as I can. This is my substitute
-for pistol and ball.
+What should you wear? Where should you go? Do you bring flowers on a first date: yes or no?
 
-With a philosophical flourish Cato throws himself upon
-his sword; I quietly take to the ship. There is nothing surprising in this.
-If they but knew it, almost all men in their degree, some time or other,
-cherish very nearly the same feelings towards the ocean with me.
+It’s so hard to know what to expect from a modern day first date as a huge number of people now e-meet on dating websites and social media websites so the chances are they don’t really know one another when they turn up nervously for their romantic encounter.
+
+So do you go in all guns blazing or play it on the cool side?
+
+Keep in mind that the modern day woman scares easily, so the consensus among modern men is, ‘no’.
