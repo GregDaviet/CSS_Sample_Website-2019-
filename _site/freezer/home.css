@@ -1,0 +1,263 @@
+
+html, body{
+  border:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	color:black;
+	font-family:Arial;
+  font-size:small;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background-color:#7b94c6;
+}
+
+form {margin: 0px 0px 0px 0px; }
+
+table.title {
+  width:100%;
+  color:#ffffff;
+  white-space:nowrap;
+}
+
+td.titleUpperLeft {
+  border-bottom:2px solid #ffe429;
+  background-color:#000063;
+  border-right:2px solid #31d200;
+}
+
+td.titleUpperMiddle {
+  width:auto;
+  border-bottom:2px solid #ffe429;
+  background-color:#ffffff;
+}
+
+td.titleUpperRight1 {
+  border-bottom:2px solid #ffe429;
+  background-color:#31ce00;
+  border-left:2px solid #000063;
+  padding: 0px 2px 0px 2px;
+  width:100px;
+}
+
+td.titleUpperRight2 {
+  border-bottom:2px solid #ffe429;
+  background-color:#02bff7;
+  border-right:2px solid #000063;
+  border-left:2px solid #000063;
+}
+
+td.titleLowerLeft {
+  background-color:#000063;
+  border-right:2px solid #31d200;
+  color: #e0e0e0;
+  padding: 0px 2px 0px 4px;
+  white-space:nowrap;
+}
+
+td.titleLowerMiddle {
+  width:auto;
+  background-color:#0094c6;
+  text-align:center;
+  font-size:large;
+  /*height:30px;*/
+}
+
+td.titleLowerRight {
+  background-color:#000063;
+  border-left:2px solid #000063;
+  color: #e0e0e0;
+  padding: 0px 2px 0px 4px;
+  white-space:nowrap;
+}
+
+
+img.intelligentStore {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.titleLogin:link { color :#e0e0e0; text-align:center;}
+a.titleLogin:visited{color :#e0e0e0; text-align:center;}
+a.titleLogin:hover{color :#ffffff; text-align:center;}
+
+a.help:link { color :#e0e0e0; text-align:center;}
+a.help:visited{color :#e0e0e0; text-align:center;}
+a.help:hover{color :#ffffff; text-align:center;}
+
+u.helpItem {
+  color :#e0e0e0;
+  cursor: pointer;
+}
+
+u.helpItemSelected {
+  color :#e0e0e0;
+  cursor: pointer;
+}
+
+u.helpItemHover {
+  color :#ffffff;
+  cursor: pointer;
+}
+
+div.ctrlList {
+  background-color:#000063;
+  color :#e0e0e0;
+  position:absolute;
+  white-space: nowrap;
+  padding: 0px 0px 0px 0px;
+  border-right:1px solid #ffffff;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+div.ctrlItem {
+  width:148px;
+  color:#e0e0e0;
+  background-color:#000063;
+  padding: 2px 2px 2px 2px;
+}
+
+div.ctrlItemSelected {
+  width:148px;
+  color:#ffffff;
+  background-color:#000000;
+  padding: 2px 2px 2px 2px;
+}
+
+div.ctrlItemHover {
+  width:148px;
+  color:#e0e0e0;
+  background-color:#000080;
+  cursor: pointer;
+  padding: 2px 2px 2px 2px;
+}
+
+div.ctrlItemSpacer {
+  width:148px;
+  height:3px;
+}
+
+div.dataContainer {
+  position:absolute;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+div.dataContainerContent {
+  width:100%;
+}
+
+div.dataContainerFiller {
+  width:100%;
+}
+
+td.dataContent {
+  vertical-align:top;
+  background-color:#ffffff;
+  width:67%;
+  padding: 0px 5px 0px 5px;
+}
+
+td.dataContentFiller {
+  vertical-align:top;
+  background-color:#ffffff;
+}
+
+td.dataHelp {
+  vertical-align:top;
+  padding: 0px 5px 0px 5px;
+  width:auto;
+  color:#000066;
+}
+
+div.dataTitle {
+  font-size:large;
+  width:100%;
+  text-align:center;
+}
+
+.statusTables {
+  padding: 1px 1px 1px 1px;
+  width:100%;
+  /*white-space:nowrap;*/
+}
+
+.statusTables th {
+  background-color:#d0d0d0;
+}
+
+.smallFont {
+  font-size:smaller;
+}
+
+.alarmTables {
+  padding: 2px 2px 2px 2px;
+  text-align:left;
+}
+
+.alarmTables th {
+  background-color:#d0d0d0;
+  text-align:center;
+}
+
+tr.altRow {
+  background-color:#f0f0f0;
+  text-align:left;
+}
+
+tr.normalRow {
+  background-color:#ffffff;
+  text-align:left;
+}
+
+td.expand {
+  background-color:#000063;
+  color :#ffffff;
+  cursor: pointer;
+  padding: 0px 5px 0px 5px;
+}
+
+td.header {
+  background-color:#000063;
+  color :#ffffff;
+  padding: 0px 5px 0px 5px;
+}
+
+.imageButton {
+  cursor: pointer;
+}
+
+.popupInfo {
+  border: 1px solid #000000;
+  background-color:white;
+}
+
+.popupTitle {
+  background-color:#000063;
+  color :#ffffff;
+  white-space:nowrap;
+  text-align:middle;
+}
+
+.graphButton {
+  width:80px;
+}
+
+.actionButton {
+  width:80px;
+}
+
+.editButton {
+  width:50px;
+}
+
+.pointOverride {
+  background-color:#a0ffff
+}
+
+.pointAlarm {
+  background-color:#ffa0a0
+}
+

@@ -1,0 +1,90 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Emerson Climate Technologies</title>
+
+    <link rel='stylesheet' href='home.css' type='text/css' >
+
+    <link rel='icon' href='favicon.ico' type='image/x-icon' >
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' >
+
+    <script type='text/javascript' src='util.js' ></script>
+    <script type='text/javascript' src='hashtab.js' ></script>
+    <script type='text/javascript' src='ajax.js' ></script>
+    <script type='text/javascript' src='e2json.js' ></script>
+    <script type='text/javascript' src='menu.js' ></script>
+    <script type='text/javascript' src='tvnode.js' ></script>
+    <script type='text/javascript' src='home.js' ></script>
+    <script type='text/javascript' src='wzgraph.js' ></script>
+    <script type='text/javascript' src='loggraph.js' ></script>
+
+    <script type='text/javascript' >
+
+      function resizeWindow() {
+        sizeContent();
+      }
+
+      function bodyOnLoad() {
+        setControllerName('E2 Unit01');
+        setFloorplanEnabled(false);
+
+        window.onresize=resizeWindow;
+
+        addMenu('helpMenu', 'u', 'helpItem', 'helpItemSelected', 'helpItemHover', true, menuClicked);
+        populateCtrlList();
+
+      }
+
+    </script>
+  </head>
+
+  <body onload='bodyOnLoad();' >
+
+    <table cellpadding='0px' cellspacing='0px' class='title'>
+      <tr>
+      <td class='titleUpperLeft'><img src='ectblue.jpg' alt='Emerson Climate Technologies' /></td>
+      <td class='titleUpperMiddle' ><img src='collage.jpg' alt='' /></td>
+      <td class='titleUpperRight1' ><b>Passion for<br/>progress...</b></td>
+      <td class='titleUpperRight2' ><img src='intelsto.jpg' alt='Intelligent Store' class='intelligentStore' /></td>
+      </tr>
+      <tr>
+        <td class='titleLowerLeft' >&nbsp;</td>
+        <td id='titleLowerMiddle' class='titleLowerMiddle' nowrap>
+        Emerson Climate Technologies
+        </td>
+        <td id='helpMenu' class='titleLowerRight' nowrap colspan=2>
+          <u id='helpMenuItem' href='help.asp' class='helpItem'>Help</u>
+        </td>
+
+      </tr>
+      <tr>
+        <td colspan=4 height='3px' style='background-color:#000000'></td>
+      </tr>
+    </table>
+
+    <div id='popupInfo' class='popupInfo' style='display: none; position: absolute; z-index: 30000; '><div id='popupTitle' class='popupTitle'><table><tr><td id='popupCaption' style='width:99%;'></td><td style='width:1%'><img id='popupHelp' class='imageButton' style='display:none;' src='help.gif' title='Help'></td><td style='width:1%'><img id='popupTerm' class='imageButton' src='term.gif' onclick='closePopup();' title='Close'></td></tr></table></div><div id='popupContent'></div></div>
+    <iframe id='popupInfoShim' style='display: none; position: absolute; z-index: 20000;' src='javascript:false;' scrolling='no' frameborder='0'></iframe>
+
+
+    <div id='ctrlList' class='ctrlList'></div>
+
+    <div id='dataContainer' class='dataContainer' onmousedown='if (!_dontClosePopup) { closePopup();}'>
+
+      <div id='dataContainerContent' class='dataContainerContent'>
+      </div>
+
+      <table id='dataContainerFiller'  cellpadding='0px' cellspacing='0px' style='width:100%;height:100%;display:none'>
+        <tr>
+          <td id='dataContainerFillerContent' class='dataContentFiller'>
+            &nbsp;
+          </td>
+          <td class='dataHelp'>
+            &nbsp;
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>
