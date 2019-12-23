@@ -5,10 +5,14 @@
   callbackError: function(status) { },
   showHVAC:true,
   showRefrig:true,
-  points:[  {prop:'E2 Unit01:GLOBAL DATA:2048', propCaption:'Unit 1A Temp', elemCaption:'captionOAT', elemData:'dataOAT', elemGraph:'graphOAT' },
-                {prop:'E2 Unit01:GLOBAL DATA:2053', propCaption:'Unit 1B Temp', elemCaption:'captionOH', elemData:'dataOH', elemGraph:'graphOH' },
-                {prop:'E2 Unit01:GLOBAL DATA:2060', propCaption:'Season', elemCaption:'captionSeason', elemData:'dataSeason', elemGraph:'graphSeason' },
-                {prop:'E2 Unit01:GLOBAL DATA:2050', propCaption:'Inside Humidity', elemCaption:'captionIH', elemData:'dataIH', elemGraph:'graphIH' },
+  points:[  {prop:'E2 Unit01:.AI.01.01.01:2048', propCaption:'Unit 1A Temp', elemCaption:'captionTemp1A', elemData:'dataTemp1A', elemGraph:'graphTemp1A' },
+                {prop:'E2 Unit01:.AI.01.01.02:2048', propCaption:'Unit 1B Temp', elemCaption:'captionTemp1B', elemData:'dataTemp1B', elemGraph:'graphTemp1B' },
+                {prop:'E2 Unit01:UNIT 1A:2050', propCaption:'Compressor', elemCaption:'captionComp1A', elemData:'dataComp1A', elemGraph:'graphComp1A' },
+                {prop:'E2 Unit01:UNIT 1B:2050', propCaption:'Compressor', elemCaption:'captionComp1B', elemData:'dataComp1B', elemGraph:'graphComp1B' },
+                {prop:'E2 Unit01:.AI.01.02.01:2048', propCaption:'Unit 2A Temp', elemCaption:'captionTemp2A', elemData:'dataTemp2A', elemGraph:'graphTemp2A' },
+                {prop:'E2 Unit01:.AI.01.02.02:2048', propCaption:'Unit 2B Temp', elemCaption:'captionTemp2B', elemData:'dataTemp2B', elemGraph:'graphTemp2B' },
+                {prop:'E2 Unit01:UNIT 2A:2050', propCaption:'Compressor', elemCaption:'captionComp2A', elemData:'dataComp2A', elemGraph:'graphComp2A' },
+                {prop:'E2 Unit01:UNIT 2B:2050', propCaption:'Compressor', elemCaption:'captionComp2B', elemData:'dataComp2B', elemGraph:'graphComp2B' },
                 {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA', elemGraph:'graphUA' }  
                 ],  
 
@@ -22,14 +26,8 @@
     if (model.indexOf('RX') >= 0) { this.showHVAC=false; }
     
     if (this.showHVAC) { 
-      document.getElementById('hvacStatus').style.display=''; 
-      this.points.push({prop:'E2 Unit01:GLOBAL DATA:2056', propCaption:'HVAC Shutdown', elemCaption:'captionHVACShutdown', elemData:'dataHVACShutdown', elemGraph:'graphHVACShutdown' });
-      this.points.push({prop:'E2 Unit01:GLOBAL DATA:2058', propCaption:'HVAC Phase Loss', elemCaption:'captionHVACPhaseLoss', elemData:'dataHVACPhaseLoss', elemGraph:'graphHVACPhaseLoss' });
     }
     if (this.showRefrig) { 
-      document.getElementById('refrigStatus').style.display=''; 
-      this.points.push({prop:'E2 Unit01:GLOBAL DATA:2057', propCaption:'Refrigeration Shutdown', elemCaption:'captionRefrigShutdown', elemData:'dataRefrigShutdown', elemGraph:'graphRefrigShutdown' });
-      this.points.push({prop:'E2 Unit01:GLOBAL DATA:2059', propCaption:'Refrigeration Phase Loss', elemCaption:'captionRefrigPhaseLoss', elemData:'dataRefrigPhaseLoss', elemGraph:'graphRefrigPhaseLoss' });
     }
 
     var props = [];
@@ -159,39 +157,39 @@
                     </tr>
                     
                     <tr>
-                      <td style='width:110px' id='captionOAT'></td>
-                      <td style='width:70px' id='dataOAT'></td>
-                      <td style='width:20px' id='graphOAT'></td>
-                      <td style='width:110px' id='captionOH'></td>
-                      <td style='width:70px' id='dataOH'></td>
-                      <td style='width:20px' id='graphOH'></td>
+                      <td style='width:110px' id='captionTemp1A'></td>
+                      <td style='width:70px' id='dataTemp1A'></td>
+                      <td style='width:20px' id='graphTemp1A'></td>
+                      <td style='width:110px' id='captionTemp1B'></td>
+                      <td style='width:70px' id='dataTemp1B'></td>
+                      <td style='width:20px' id='graphTemp1B'></td>
                     </tr>
 
                     <tr>
-                      <td id='captionSeason'></td>
-                      <td id='dataSeason'></td>
-                      <td id='graphSeason'></td>
-                      <td id='captionIH'></td>
-                      <td id='dataIH'></td>
-                      <td id='graphIH'></td>
+                      <td id='captionComp1A'></td>
+                      <td id='dataComp1A'></td>
+                      <td id='graphComp1A'></td>
+                      <td id='captionComp1B'></td>
+                      <td id='dataComp1B'></td>
+                      <td id='graphComp1B'></td>
                     </tr>
 
-                    <tr id='hvacStatus' style='display:none'>
-                      <td id='captionHVACShutdown'></td>
-                      <td id='dataHVACShutdown'></td>
-                      <td id='graphHVACShutdown'></td>
-                      <td id='captionHVACPhaseLoss'></td>
-                      <td id='dataHVACPhaseLoss'></td>
-                      <td id='graphHVACPhaseLoss'></td>
+                    <tr>
+                      <td id='captionTemp2A'></td>
+                      <td id='dataTemp2A'></td>
+                      <td id='graphTemp2A'></td>
+                      <td id='captionTemp2B'></td>
+                      <td id='dataTemp2B'></td>
+                      <td id='graphTemp2B'></td>
                     </tr>
 
-                    <tr id='refrigStatus' style='display:none'>
-                      <td id='captionRefrigShutdown'></td>
-                      <td id='dataRefrigShutdown'></td>
-                      <td id='graphRefrigShutdown'></td>
-                      <td id='captionRefrigPhaseLoss'></td>
-                      <td id='dataRefrigPhaseLoss'></td>
-                      <td id='graphRefrigPhaseLoss'></td>
+                    <tr>
+                      <td id='captionComp2A'></td>
+                      <td id='dataComp2A'></td>
+                      <td id='graphComp2A'></td>
+                      <td id='captionComp2B'></td>
+                      <td id='dataComp2B'></td>
+                      <td id='graphComp2B'></td>
                     </tr>
 
                     <tr>
