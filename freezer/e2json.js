@@ -1,5 +1,5 @@
 var _E2jsonId = 0;
-var _E2jsonUrl = 'http://cors-anywhere.herokuapp.com/http://server.dixieranch.com:8151/JSON-RPC';
+var _E2jsonUrl = 'https://dixieranch-cors-anywhere.herokuapp.com/http://server.dixieranch.com:8151/JSON-RPC';
 
 var _E2json = new DataRequestor();
 var _E2jsonAction = new DataRequestor();
