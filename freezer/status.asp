@@ -9,25 +9,25 @@
                 {prop:'E2 Unit01:.AI.01.01.02:2048', propCaption:'Unit 1B Temp', elemCaption:'captionTemp1B', elemData:'dataTemp1B', elemGraph:'graphTemp1B' },
                 {prop:'E2 Unit01:UNIT 1A:2050', propCaption:'Compressor', elemCaption:'captionComp1A', elemData:'dataComp1A', elemGraph:'graphComp1A' },
                 {prop:'E2 Unit01:UNIT 1B:2050', propCaption:'Compressor', elemCaption:'captionComp1B', elemData:'dataComp1B', elemGraph:'graphComp1B' },
-                {prop:'E2 Unit01:.AI.01.02.01:2048', propCaption:'Unit 2A Temp', elemCaption:'captionTemp2A', elemData:'dataTemp2A', elemGraph:'graphTemp2A' },
-                {prop:'E2 Unit01:.AI.01.02.02:2048', propCaption:'Unit 2B Temp', elemCaption:'captionTemp2B', elemData:'dataTemp2B', elemGraph:'graphTemp2B' },
+                {prop:'E2 Unit01:.AI.01.02.02:2048', propCaption:'Unit 2A Temp', elemCaption:'captionTemp2A', elemData:'dataTemp2A', elemGraph:'graphTemp2A' },
+                {prop:'E2 Unit01:.AI.01.02.01:2048', propCaption:'Unit 2B Temp', elemCaption:'captionTemp2B', elemData:'dataTemp2B', elemGraph:'graphTemp2B' },
                 {prop:'E2 Unit01:UNIT 2A:2050', propCaption:'Compressor', elemCaption:'captionComp2A', elemData:'dataComp2A', elemGraph:'graphComp2A' },
                 {prop:'E2 Unit01:UNIT 2B:2050', propCaption:'Compressor', elemCaption:'captionComp2B', elemData:'dataComp2B', elemGraph:'graphComp2B' },
-                {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA', elemGraph:'graphUA' }  
-                ],  
+                {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA', elemGraph:'graphUA' }
+                ],
 
   contentWidth: function() {
     return document.getElementById('dataContentRowWidth').offsetWidth;
   },
-  load: function() { 
+  load: function() {
     var model='RX-400 ';
-    
-    if (model.indexOf('BX') >= 0) { this.showRefrig=false; } 
+
+    if (model.indexOf('BX') >= 0) { this.showRefrig=false; }
     if (model.indexOf('RX') >= 0) { this.showHVAC=false; }
-    
-    if (this.showHVAC) { 
+
+    if (this.showHVAC) {
     }
-    if (this.showRefrig) { 
+    if (this.showRefrig) {
     }
 
     var props = [];
@@ -39,7 +39,7 @@
   unload:function() {
     clearInterval(this.TimerId);
   },
-  
+
   onupdate:function() {
     var props = [];
     for (i in this.points) {
@@ -47,11 +47,11 @@
     }
     getMultiExpandedStatus(_pageData.pointStatusSuccess, _pageData.callbackError, props);
   },
-  
+
   getConfigValues:function() {
     getConfigValues(_pageData.configValuesSuccess, _pageData.callbackError, ['E2 Unit01:TIME SERVICES:7000', 'E2 Unit01:TIME SERVICES:7001']);
   },
-  
+
   pointInfoSuccess:function(jsonData, obj) {
     function addGraphIcon(elem, arg) {
       if (elem) {
@@ -63,7 +63,7 @@
         elem.appendChild(img);
       }
     }
-  
+
     for (i in jsonData.result.data) {
       for (j in _pageData.points) {
         if (_pageData.points[j].prop == jsonData.result.data[i].prop) {
@@ -73,7 +73,7 @@
           }
         }
       }
-    }      
+    }
 
     setTimeout('_pageData.onupdate();',1);
     _pageData.TimerId = setInterval('_pageData.onupdate();',20000);
@@ -89,8 +89,8 @@
             str += '\u00A0' + convertEngUnit(status.engUnits);
           }
           var elem=document.getElementById(_pageData.points[j].elemData);
-          if (elem) { 
-            setElementText(elem, str); 
+          if (elem) {
+            setElementText(elem, str);
             if (status.alarm || status.fail) {
               elem.className='pointAlarm';
             } else if (status.override) {
@@ -102,7 +102,7 @@
         }
       }
     }
-    
+
     _pageData.getConfigValues();
   },
 
@@ -115,7 +115,7 @@
       if (status.prop == 'E2 Unit01:TIME SERVICES:7001') {
         document.getElementById('siteDate').innerHTML = status.value;
       }
-    }  
+    }
   }
 }
 </div>
@@ -136,7 +136,7 @@
     <td class='dataContent'>
             <table class='statusTables' border='0' cellspacing='' cellpadding='0'>
 
-      <!-- 
+      <!--
       ********* general status ****************************************************
       -->
               <tr>
@@ -155,7 +155,7 @@
                       <td>&nbsp;</td>
                       <td>&nbsp;</td>
                     </tr>
-                    
+
                     <tr>
                       <td style='width:110px' id='captionTemp1A'></td>
                       <td style='width:70px' id='dataTemp1A'></td>
@@ -214,7 +214,7 @@
     </td>
   </tr>
   <tr><td class='dataContent'>&nbsp;</td></tr>
-  <tr>  
+  <tr>
     <td class='dataContent'>
             <table class='statusTables' border='0' cellspacing='0' cellpadding='0'>
               <tr>
@@ -233,7 +233,7 @@
                       <td>&nbsp;</td>
                       <td>&nbsp;</td>
                     </tr>
-                  
+
                     <tr>
                       <td style='width:20%;white-space:nowrap'>Model/Series:</td>
                       <td style='width:30%;white-space:nowrap'>RX-400  </td>
