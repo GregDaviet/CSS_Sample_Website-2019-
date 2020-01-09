@@ -14,7 +14,7 @@
     tablePlace.innerHTML='Error retrieving alarm information.';
     document.getElementById('advisoryActive').innerHTML = '';
     document.getElementById('advisoryTotal').innerHTML = '';
-    _pageData.timerId = setTimeout('_pageData.onupdate();',20000);
+    _pageData.timerId = setTimeout('_pageData.onupdate();',300000);
   },
 
   contentWidth: function() {
@@ -36,7 +36,7 @@
     if (isPopupOpen()) {
       this.popupActiveCount++;
       if (this.popupActiveCount<4) {
-        this.timerId = setTimeout('_pageData.onupdate();',20000);
+        this.timerId = setTimeout('_pageData.onupdate();',300000);
         return
       } else {
         closePopup();
@@ -49,7 +49,7 @@
   alarmCallbackSuccess:function(jsonData, obj)
   {
     if (isPopupOpen()) {
-      _pageData.timerId = setTimeout('_pageData.onupdate();',20000);
+      _pageData.timerId = setTimeout('_pageData.onupdate();',300000);
       return;
     }
 
@@ -164,7 +164,7 @@
     tablePlace.appendChild(table);
 
     sizeContent();
-    _pageData.timerId = setTimeout('_pageData.onupdate();',20000);
+    _pageData.timerId = setTimeout('_pageData.onupdate();',300000);
   },
 
   alarmMoreInfo:function(e, arg) {

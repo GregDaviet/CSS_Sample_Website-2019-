@@ -76,7 +76,7 @@
     }
 
     setTimeout('_pageData.onupdate();',1);
-    _pageData.TimerId = setInterval('_pageData.onupdate();',20000);
+    _pageData.TimerId = setInterval('_pageData.onupdate();',300000);
   },
 
   pointStatusSuccess:function(jsonData, obj) {
