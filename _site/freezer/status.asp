@@ -5,14 +5,19 @@
   callbackError: function(status) { },
   showHVAC:true,
   showRefrig:true,
-  points:[  {prop:'E2 Unit01:CTL-TEMP 1A:2048', propCaption:'Unit 1A Temp', elemCaption:'captionTemp1A', elemData:'dataTemp1A', elemGraph:'graphTemp1A' },
-                {prop:'E2 Unit01:CTL-TEMP 1B:2048', propCaption:'Unit 1B Temp', elemCaption:'captionTemp1B', elemData:'dataTemp1B', elemGraph:'graphTemp1B' },
-                {prop:'E2 Unit01:UNIT 1A:2050', propCaption:'Compressor', elemCaption:'captionComp1A', elemData:'dataComp1A', elemGraph:'graphComp1A' },
-                {prop:'E2 Unit01:UNIT 1B:2050', propCaption:'Compressor', elemCaption:'captionComp1B', elemData:'dataComp1B', elemGraph:'graphComp1B' },
-                {prop:'E2 Unit01:CTL-TEMP 2A:2048', propCaption:'Unit 2A Temp', elemCaption:'captionTemp2A', elemData:'dataTemp2A', elemGraph:'graphTemp2A' },
-                {prop:'E2 Unit01:CTL-TEMP 2B:2048', propCaption:'Unit 2B Temp', elemCaption:'captionTemp2B', elemData:'dataTemp2B', elemGraph:'graphTemp2B' },
-                {prop:'E2 Unit01:UNIT 2A:2050', propCaption:'Compressor', elemCaption:'captionComp2A', elemData:'dataComp2A', elemGraph:'graphComp2A' },
-                {prop:'E2 Unit01:UNIT 2B:2050', propCaption:'Compressor', elemCaption:'captionComp2B', elemData:'dataComp2B', elemGraph:'graphComp2B' },
+  points:[  {prop:'E2 Unit01:CTRL-TEMP:2048', propCaption:'Control Temp', elemCaption:'captionCTRL-TEMP', elemData:'dataCTRL-TEMP', elemGraph:'graphCTRL-TEMP' },
+                {prop:'E2 Unit01:FAN-1A:2048', propCaption:'Fan', elemCaption:'captionFan1A', elemData:'dataFan1A', elemGraph:'graphFan1A' },
+                {prop:'E2 Unit01:FAN-1B:2048', propCaption:'Fan', elemCaption:'captionFan1B', elemData:'dataFan1B', elemGraph:'graphFan1B' },
+                {prop:'E2 Unit01:FAN-2A:2048', propCaption:'Fan', elemCaption:'captionFan2A', elemData:'dataFan2A', elemGraph:'graphFan2A' },
+                {prop:'E2 Unit01:FAN-2B:2048', propCaption:'Fan', elemCaption:'captionFan2B', elemData:'dataFan2B', elemGraph:'graphFan2B' },
+                {prop:'E2 Unit01:REFRIGSOL-1A:2048', propCaption:'Refrig', elemCaption:'captionRefrig1A', elemData:'dataRefrig1A', elemGraph:'graphRefrig1A' },
+                {prop:'E2 Unit01:REFRIGSOL-1B:2048', propCaption:'Refrig', elemCaption:'captionRefrig1B', elemData:'dataRefrig1B', elemGraph:'graphRefrig1B' },
+                {prop:'E2 Unit01:REFRIGSOL-2A:2048', propCaption:'Refrig', elemCaption:'captionRefrig2A', elemData:'dataRefrig2A', elemGraph:'graphRefrig2A' },
+                {prop:'E2 Unit01:REFRIGSOL-2B:2048', propCaption:'Refrig', elemCaption:'captionRefrig2B', elemData:'dataRefrig2B', elemGraph:'graphRefrig2B' },
+                {prop:'E2 Unit01:DEFROST-1A:2048', propCaption:'Defrost', elemCaption:'captionDefrost1A', elemData:'dataDefrost1A', elemGraph:'graphDefrost1A' },
+                {prop:'E2 Unit01:DEFROST-1B:2048', propCaption:'Defrost', elemCaption:'captionDefrost1B', elemData:'dataDefrost1B', elemGraph:'graphDefrost1B' },
+                {prop:'E2 Unit01:DEFROST-2A:2048', propCaption:'Defrost', elemCaption:'captionDefrost2A', elemData:'dataDefrost2A', elemGraph:'graphDefrost2A' },
+                {prop:'E2 Unit01:DEFROST-2B:2048', propCaption:'Defrost', elemCaption:'captionDefrost2B', elemData:'dataDefrost2B', elemGraph:'graphDefrost2B' },
                 {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA', elemGraph:'graphUA' }
                 ],
 
@@ -76,7 +81,7 @@
     }
 
     setTimeout('_pageData.onupdate();',1);
-    _pageData.TimerId = setInterval('_pageData.onupdate();',300000);
+    _pageData.TimerId = setInterval('_pageData.onupdate();',20000);
   },
 
   pointStatusSuccess:function(jsonData, obj) {
@@ -125,7 +130,11 @@
   <tr>
     <td  id='dataContentRowWidth' class='dataContent'>
       <br>
-      <div class='dataTitle'>Controller Summary</div>
+      <div class='dataTitle' id='captionCTRL-TEMP'></div>
+      <br>
+      <div style="font-size:large; text-align:center;" id='dataCTRL-TEMP'></div>
+      <br>
+      <div style="text-align:center;" id='graphCTRL-TEMP'></div>
       <br>
     </td>
     <td class='dataHelp'>&nbsp;
@@ -150,55 +159,83 @@
                   <table cellpadding='2px' cellspacing='0px' style='width:100%'>
 
                     <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+                      <td style='width:110px'>Unit 1A</td>
+                      <td style='width:70px'>&nbsp;</td>
+                      <td style='width:20px'>&nbsp;</td>
+                      <td style='width:110px'>Unit 1B</td>
+                      <td style='width:70px'>&nbsp;</td>
+                      <td style='width:20px'>&nbsp;</td>
                     </tr>
 
                     <tr>
-                      <td style='width:110px' id='captionTemp1A'></td>
-                      <td style='width:70px' id='dataTemp1A'></td>
-                      <td style='width:20px' id='graphTemp1A'></td>
-                      <td style='width:110px' id='captionTemp1B'></td>
-                      <td style='width:70px' id='dataTemp1B'></td>
-                      <td style='width:20px' id='graphTemp1B'></td>
+                      <td style='text-align:right' id='captionFan1A'></td>
+                      <td id='dataFan1A'></td>
+                      <td id='graphFan1A'></td>
+                      <td style='text-align:right' id='captionFan1B'></td>
+                      <td id='dataFan1B'></td>
+                      <td id='graphFan1B'></td>
                     </tr>
 
                     <tr>
-                      <td id='captionComp1A'></td>
-                      <td id='dataComp1A'></td>
-                      <td id='graphComp1A'></td>
-                      <td id='captionComp1B'></td>
-                      <td id='dataComp1B'></td>
-                      <td id='graphComp1B'></td>
+                      <td style='text-align:right' id='captionRefrig1A'></td>
+                      <td id='dataRefrig1A'></td>
+                      <td id='graphRefrig1A'></td>
+                      <td style='text-align:right' id='captionRefrig1B'></td>
+                      <td id='dataRefrig1B'></td>
+                      <td id='graphRefrig1B'></td>
                     </tr>
 
                     <tr>
-                      <td id='captionTemp2A'></td>
-                      <td id='dataTemp2A'></td>
-                      <td id='graphTemp2A'></td>
-                      <td id='captionTemp2B'></td>
-                      <td id='dataTemp2B'></td>
-                      <td id='graphTemp2B'></td>
+                      <td style='text-align:right' id='captionDefrost1A'></td>
+                      <td id='dataDefrost1A'></td>
+                      <td id='graphDefrost1A'></td>
+                      <td style='text-align:right' id='captionDefrost1B'></td>
+                      <td id='dataDefrost1B'></td>
+                      <td id='graphDefrost1B'></td>
                     </tr>
 
                     <tr>
-                      <td id='captionComp2A'></td>
-                      <td id='dataComp2A'></td>
-                      <td id='graphComp2A'></td>
-                      <td id='captionComp2B'></td>
-                      <td id='dataComp2B'></td>
-                      <td id='graphComp2B'></td>
+                      <td style='width:110px'>Unit 2A</td>
+                      <td style='width:70px'>&nbsp;</td>
+                      <td style='width:20px'>&nbsp;</td>
+                      <td style='width:110px'>Unit 2B</td>
+                      <td style='width:70px'>&nbsp;</td>
+                      <td style='width:20px'>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td style='text-align:right' id='captionFan2A'></td>
+                      <td id='dataFan2A'></td>
+                      <td id='graphFan2A'></td>
+                      <td style='text-align:right' id='captionFan2B'></td>
+                      <td id='dataFan2B'></td>
+                      <td id='graphFan2B'></td>
+                    </tr>
+
+                    <tr>
+                      <td style='text-align:right' id='captionRefrig2A'></td>
+                      <td id='dataRefrig2A'></td>
+                      <td id='graphRefrig2A'></td>
+                      <td style='text-align:right' id='captionRefrig2B'></td>
+                      <td id='dataRefrig2B'></td>
+                      <td id='graphRefrig2B'></td>
+                    </tr>
+
+                    <tr>
+                      <td style='text-align:right' id='captionDefrost2A'></td>
+                      <td id='dataDefrost2A'></td>
+                      <td id='graphDefrost2A'></td>
+                      <td style='text-align:right' id='captionDefrost2B'></td>
+                      <td id='dataDefrost2B'></td>
+                      <td id='graphDefrost2B'></td>
                     </tr>
 
                     <tr>
                       <td id='captionUA'></td>
+                    </tr>
+
+                    <tr>
                       <td id='dataUA'></td>
-                      <td id='graphUA'></td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
                     </tr>
 
                   </table>
