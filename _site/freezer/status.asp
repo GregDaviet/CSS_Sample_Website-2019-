@@ -18,7 +18,9 @@
                 {prop:'E2 Unit01:1B-DEFROST:COMMAND OUT', propCaption:'Defrost', elemCaption:'captionDefrost1B', elemData:'dataDefrost1B', elemGraph:'graphDefrost1B' },
                 {prop:'E2 Unit01:2A-DEFROST:COMMAND OUT', propCaption:'Defrost', elemCaption:'captionDefrost2A', elemData:'dataDefrost2A', elemGraph:'graphDefrost2A' },
                 {prop:'E2 Unit01:2B-DEFROST:COMMAND OUT', propCaption:'Defrost', elemCaption:'captionDefrost2B', elemData:'dataDefrost2B', elemGraph:'graphDefrost2B' },
-                {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA', elemGraph:'graphUA' }
+                {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA' },
+                {prop:'E2 Unit01:TIME SERVICES:7000', propCaption:'Time:', elemCaption:'captionSiteTime', elemData:'dataSiteTime' },
+                {prop:'E2 Unit01:TIME SERVICES:7001', propCaption:'Date:', elemCaption:'captionSiteDate', elemData:'dataSiteDate' }
                 ],
 
   contentWidth: function() {
@@ -275,28 +277,28 @@
                       <td style='width:20%;white-space:nowrap'>Model/Series:</td>
                       <td style='width:30%;white-space:nowrap'>RX-400  </td>
                       <td style='width:20%;white-space:nowrap'>Site Name:</td>
-                      <td style='width:30%;white-space:nowrap'>DIXIE FARMS </td>
+                      <td style='width:30%;white-space:nowrap'>Dixe Ranch Inc </td>
                     </tr>
 
                     <tr>
                       <td>IP Address:</td>
                       <td>192.168.20.151 </td>
                       <td>Phone Number:</td>
-                      <td> </td>
+                      <td>575-201-3069</td>
                     </tr>
 
                     <tr>
                       <td>Revision:</td>
                       <td> 4.09F04 </td>
-                      <td>Date:</td>
-                      <td id='siteDate'>12-21-19</td>
+                      <td id='captionSiteDate'></td>
+                      <td id='dataSiteDate'></td>
                     </tr>
 
                     <tr>
                       <td>Client Port:</td>
                       <td>1025</td>
-                      <td>Time:</td>
-                      <td id='siteTime'>6:43:33</td>
+                      <td id='captionSiteTime'></td>
+                      <td id='dataSiteTime'></td>
                     </tr>
 
                     <tr>
