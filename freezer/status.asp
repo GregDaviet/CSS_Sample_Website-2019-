@@ -18,6 +18,14 @@
                 {prop:'E2 Unit01:DEFROST-1B:COMMAND OUT', propCaption:'Defrost', elemCaption:'captionDefrost1B', elemData:'dataDefrost1B', elemGraph:'graphDefrost1B' },
                 {prop:'E2 Unit01:DEFROST-2A:COMMAND OUT', propCaption:'Defrost', elemCaption:'captionDefrost2A', elemData:'dataDefrost2A', elemGraph:'graphDefrost2A' },
                 {prop:'E2 Unit01:DEFROST-2B:COMMAND OUT', propCaption:'Defrost', elemCaption:'captionDefrost2B', elemData:'dataDefrost2B', elemGraph:'graphDefrost2B' },
+                {prop:'E2 Unit01:1A-Discharge:2048', propCaption:'Discharge', elemCaption:'captionDischarge1A', elemData:'dataDischarge1A', elemGraph:'graphDischarge1A' },
+                {prop:'E2 Unit01:1B-Discharge:2048', propCaption:'Discharge', elemCaption:'captionDischarge1B', elemData:'dataDischarge1B', elemGraph:'graphDischarge1B' },
+                {prop:'E2 Unit01:2A-Discharge:2048', propCaption:'Discharge', elemCaption:'captionDischarge2A', elemData:'dataDischarge2A', elemGraph:'graphDischarge2A' },
+                {prop:'E2 Unit01:2B-Discharge:2048', propCaption:'Discharge', elemCaption:'captionDischarge2B', elemData:'dataDischarge2B', elemGraph:'graphDischarge2B' },
+                {prop:'E2 Unit01:1A-Suction:2048', propCaption:'Suction', elemCaption:'captionSuction1A', elemData:'dataSuction1A', elemGraph:'graphSuction1A' },
+                {prop:'E2 Unit01:1B-Suction:2048', propCaption:'Suction', elemCaption:'captionSuction1B', elemData:'dataSuction1B', elemGraph:'graphSuction1B' },
+                {prop:'E2 Unit01:2A-Suction:2048', propCaption:'Suction', elemCaption:'captionSuction2A', elemData:'dataSuction2A', elemGraph:'graphSuction2A' },
+                {prop:'E2 Unit01:2B-Suction:2048', propCaption:'Suction', elemCaption:'captionSuction2B', elemData:'dataSuction2B', elemGraph:'graphSuction2B' },
                 {prop:'E2 Unit01:ADVISORY SERV:2048', propCaption:'Unit Alarm', elemCaption:'captionUA', elemData:'dataUA' },
                 {prop:'E2 Unit01:TIME SERVICES:7000', propCaption:'Time:', elemCaption:'captionSiteTime', elemData:'dataSiteTime' },
                 {prop:'E2 Unit01:TIME SERVICES:7001', propCaption:'Date:', elemCaption:'captionSiteDate', elemData:'dataSiteDate' }
@@ -197,6 +205,24 @@
                     </tr>
 
                     <tr>
+                      <td style='text-align:right' id='captionDischarge1A'></td>
+                      <td style='text-align:right' id='dataDischarge1A'></td>
+                      <td id='graphDischarge1A'></td>
+                      <td style='text-align:right' id='captionDischarge1B'></td>
+                      <td style='text-align:right' id='dataDischarge1B'></td>
+                      <td id='graphDischarge1B'></td>
+                    </tr>
+
+                    <tr>
+                      <td style='text-align:right' id='captionSuction1A'></td>
+                      <td style='text-align:right' id='dataSuction1A'></td>
+                      <td id='graphSuction1A'></td>
+                      <td style='text-align:right' id='captionSuction1B'></td>
+                      <td style='text-align:right' id='dataSuction1B'></td>
+                      <td id='graphSuction1B'></td>
+                    </tr>
+
+                    <tr>
                       <td style='width:110px'>Unit 2A</td>
                       <td style='width:70px'>&nbsp;</td>
                       <td style='width:20px'>&nbsp;</td>
@@ -230,6 +256,24 @@
                       <td style='text-align:right' id='captionDefrost2B'></td>
                       <td id='dataDefrost2B'></td>
                       <td id='graphDefrost2B'></td>
+                    </tr>
+
+                    <tr>
+                      <td style='text-align:right' id='captionDischarge2A'></td>
+                      <td style='text-align:right' id='dataDischarge2A'></td>
+                      <td id='graphDischarge2A'></td>
+                      <td style='text-align:right' id='captionDischarge2B'></td>
+                      <td style='text-align:right' id='dataDischarge2B'></td>
+                      <td id='graphDischarge2B'></td>
+                    </tr>
+
+                    <tr>
+                      <td style='text-align:right' id='captionSuction2A'></td>
+                      <td style='text-align:right' id='dataSuction2A'></td>
+                      <td id='graphSuction2A'></td>
+                      <td style='text-align:right' id='captionSuction2B'></td>
+                      <td style='text-align:right' id='dataSuction2B'></td>
+                      <td id='graphSuction2B'></td>
                     </tr>
 
                     <tr>
